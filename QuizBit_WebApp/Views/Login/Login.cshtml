@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@model QuizBit_WebApp.Models.User
+@{
+    Layout = null;
+    var alertLogin = ViewBag.alertLogin;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Login V18</title>
@@ -12,7 +17,6 @@
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!--===============================================================================================-->
-
     <!--===============================================================================================-->
     <link href="~/Content/animate.css" rel="stylesheet" />
     <!--===============================================================================================-->
@@ -32,21 +36,31 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form">
+
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
                     <span class="login100-form-title p-b-43">
                         ĐĂNG NHẬP
                     </span>
+                    if (alertLogin == true)
+                    {
+                        <div class="alert alert-danger alert-dismissible errorBox" style="text-shadow: none; list-style-type:none">
 
-
+                            <i class="fa fa-exclamation-triangle"></i>&nbsp; @ViewBag.Mes
+                        </div>
+                    }
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email">
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "input100", autofocus = "autofocus" })
                         <span class="focus-input100"></span>
                         <span class="label-input100">Tên đăng nhập</span>
                     </div>
 
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass">
+                        @Html.PasswordFor(model => model.Password, new { @class = "input100" })
                         <span class="focus-input100"></span>
                         <span class="label-input100">Mật khẩu</span>
                     </div>
@@ -69,15 +83,16 @@
 
 
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Đăng nhập
                         </button>
                     </div>
+                }
 
 
-                </form>
 
-                <div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+
+                <div class="login100-more" style="background-image: url('/Resource/Img/bg-01.jpg');">
                 </div>
             </div>
         </div>
@@ -88,21 +103,19 @@
 
 
     <!--===============================================================================================-->
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <script src="~/Scripts/animsition.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/select2/select2.min.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/daterangepicker/moment.min.js"></script>
-    <script src="vendor/daterangepicker/daterangepicker.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <script src="~/Scripts/countdowntime.js"></script>
     <!--===============================================================================================-->
-    <script src="js/main.js"></script>
+    <script src="~/Scripts/login.js"></script>
 
 </body>
 </html>

@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizBit_WebApp", "QuizBit_WebApp\QuizBit_WebApp.csproj", "{C51B1D60-089A-468B-9F9E-15CD5871A371}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop.Lib", "Desktop.Lib\Desktop.Lib.csproj", "{4FECED48-24E6-498C-80E2-4960E7110910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizBit.Contract", "QuizBit.Contract\QuizBit.Contract.csproj", "{01E0419D-9B54-419B-8D0A-A0B8AA30D987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizBit.Entity", "QuizBit.Entity\QuizBit.Entity.csproj", "{31AEF50A-9BA8-4440-8BF6-0B7E3A8CBCC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C51B1D60-089A-468B-9F9E-15CD5871A371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C51B1D60-089A-468B-9F9E-15CD5871A371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C51B1D60-089A-468B-9F9E-15CD5871A371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FECED48-24E6-498C-80E2-4960E7110910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FECED48-24E6-498C-80E2-4960E7110910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FECED48-24E6-498C-80E2-4960E7110910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FECED48-24E6-498C-80E2-4960E7110910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E0419D-9B54-419B-8D0A-A0B8AA30D987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E0419D-9B54-419B-8D0A-A0B8AA30D987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E0419D-9B54-419B-8D0A-A0B8AA30D987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E0419D-9B54-419B-8D0A-A0B8AA30D987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AEF50A-9BA8-4440-8BF6-0B7E3A8CBCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AEF50A-9BA8-4440-8BF6-0B7E3A8CBCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AEF50A-9BA8-4440-8BF6-0B7E3A8CBCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AEF50A-9BA8-4440-8BF6-0B7E3A8CBCC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

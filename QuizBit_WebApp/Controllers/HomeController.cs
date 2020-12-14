@@ -8,22 +8,18 @@ namespace QuizBit_WebApp.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
+            if (DateTime.Now.ToString("tt").Contains("AM"))
+            {
+                ViewBag.Title = String.Format("Hoạt động trong ngày({0} - {1} Sáng)", DateTime.Now.ToString("dd / MM / yyyy"), DateTime.Now.ToString("hh:mm"));
+            }
+            else
+            {
+                ViewBag.Title = String.Format("Hoạt động trong ngày({0} - {1} Chiều)", DateTime.Now.ToString("dd / MM / yyyy"), DateTime.Now.ToString("hh:mm"));
+            }
+            
             return View();
         }
     }
